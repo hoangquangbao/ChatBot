@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let apiKey: String = "YOUR API KEY"
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,6 +19,20 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            Task {
+                let api = ChatBotAPIService(apiKey: apiKey)
+                
+                do {
+                    let stream = try await api.sendMessageStream(text: "What is ChatGPT")
+                    for try await line in stream {
+                        print(line)
+                    }
+                } catch {
+                    print("Error: " + error.localizedDescription)
+                }
+            }
+        }
     }
 }
 
