@@ -12,6 +12,7 @@
 		0669BDDC2A53AE8200707E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0669BDDB2A53AE8200707E92 /* Assets.xcassets */; };
 		0669BDDF2A53AE8200707E92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0669BDDE2A53AE8200707E92 /* Preview Assets.xcassets */; };
 		0669BDE62A540B9D00707E92 /* ChatBotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669BDE52A540B9D00707E92 /* ChatBotModel.swift */; };
+		0691FFFE2A56A8FD004A26A7 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691FFFD2A56A8FD004A26A7 /* Extention.swift */; };
 		06B70F902A551C8D00BB5D21 /* ChatBotAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B70F8F2A551C8D00BB5D21 /* ChatBotAPIService.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		0669BDDB2A53AE8200707E92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0669BDDE2A53AE8200707E92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0669BDE52A540B9D00707E92 /* ChatBotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotModel.swift; sourceTree = "<group>"; };
+		0691FFFD2A56A8FD004A26A7 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		06B70F8F2A551C8D00BB5D21 /* ChatBotAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 				0669BDD92A53AE8000707E92 /* ContentView.swift */,
 				0669BDE52A540B9D00707E92 /* ChatBotModel.swift */,
 				06B70F8F2A551C8D00BB5D21 /* ChatBotAPIService.swift */,
+				0691FFFD2A56A8FD004A26A7 /* Extention.swift */,
 				0669BDDB2A53AE8200707E92 /* Assets.xcassets */,
 				0669BDDD2A53AE8200707E92 /* Preview Content */,
 			);
@@ -146,6 +149,7 @@
 				0669BDE62A540B9D00707E92 /* ChatBotModel.swift in Sources */,
 				0669BDDA2A53AE8000707E92 /* ContentView.swift in Sources */,
 				06B70F902A551C8D00BB5D21 /* ChatBotAPIService.swift in Sources */,
+				0691FFFE2A56A8FD004A26A7 /* Extention.swift in Sources */,
 				0669BDD82A53AE8000707E92 /* ChatBotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

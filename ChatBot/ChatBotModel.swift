@@ -48,6 +48,7 @@ struct Usage: Decodable {
 struct Choice: Decodable {
     let message: Message
     let finishReason: String?
+    let text: String
 }
 
 struct StreamChoice: Decodable {

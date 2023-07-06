@@ -74,18 +74,23 @@ class ChatBotAPIService {
         let (data, response) = try await URLSession.shared.bytes(for: urlRequest)
 
         guard let httpResponse = response as? HTTPURLResponse else {
-            throw MyError.invalidResponse
+            throw NetworkError.invalidResponse.description
         }
         
         guard 200...299 ~= httpResponse.statusCode else {
-            throw MyError.badResponse(httpResponse.statusCode)
+            throw NetworkError.badResponse(int: httpResponse.statusCode).description
         }
         
         return AsyncThrowingStream<String, Error> { continuation in
             Task(priority: .userInitiated) {
                 do {
                     for try await line in data.lines {
-                        continuation.yield(line)
+                        if line.hasPrefix("data: "),
+                           let data = line.dropFirst(6).data(using: .utf8),
+                           let response = try? self.jsonDecoder.decode(CompletionResponse.self, from: data),
+                           let text = response.choices.first?.text {
+                            continuation.yield(text)
+                        }
                     }
                     continuation.finish()
                 } catch {
@@ -93,10 +98,5 @@ class ChatBotAPIService {
                 }
             }
         }
-    }
-    
-    enum MyError: Error {
-        case invalidResponse
-        case badResponse(Int)
     }
 }

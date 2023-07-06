@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let apiKey: String = "YOUR API KEY"
+    let apiKey: String = "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"
     
     var body: some View {
         VStack {
